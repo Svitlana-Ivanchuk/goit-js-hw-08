@@ -18,7 +18,9 @@ formEl.addEventListener('submit', handelFormSubmit);
 function handelFormSubmit(evt) {
   evt.preventDefoult();
   console.log('remove');
+
   evt.currentTarget.reset();
+
   localStorage.removeItem(STORAGE_KEY);
 }
 

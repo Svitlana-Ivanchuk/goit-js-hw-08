@@ -12,12 +12,11 @@ player.on('timeupdate', throttle(setCurrentTime, 1000));
 
 const getCurrentTime = localStorage.getItem('videoplayer-current-time');
 
-player.setCurrentTime(getCurrentTime);
-
-// не розумію чи потрібне продовження, без нього теж працює
-// .then(function (seconds) {
-//   // seconds = the current playback position
-// })
-// .catch(function (error) {
-//   // an error occurred
-// });
+player
+  .setCurrentTime(getCurrentTime)
+  .then(function (seconds) {
+    // seconds = the current playback position
+  })
+  .catch(function (error) {
+    // an error occurred
+  });
