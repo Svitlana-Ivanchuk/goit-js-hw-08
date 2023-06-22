@@ -19,10 +19,10 @@ function handelFormSubmit(evt) {
   evt.preventDefault();
 
   console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
-  if ((messageEl.value = "" || emailEl.value) = "") {
-  return console.log("Please fill in all the fields!");
+  if ((messageEl.value === '' || emailEl.value) === '') {
+    return console.log('Please fill in all the fields!');
   }
-    
+
   evt.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
