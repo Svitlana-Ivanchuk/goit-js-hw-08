@@ -21,7 +21,7 @@ function handelFormSubmit(evt) {
   console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
 
   if (messageEl.value === '' || emailEl.value === '') {
-    return console.log('Please fill in all the fields!');
+    alert('Всі поля повинні бути заповненні');
   }
 
   evt.currentTarget.reset();
