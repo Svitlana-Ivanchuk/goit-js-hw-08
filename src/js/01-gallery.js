@@ -12,7 +12,7 @@ const cardsMarkup = createImageCardMarkup(galleryItems);
 
 galleryCollection.insertAdjacentHTML('beforeend', cardsMarkup);
 
-galleryCollection.addEventListener('click', handelGalleryCollectionClick);
+// galleryCollection.addEventListener('click', handelGalleryCollectionClick);
 
 galleryCollection.style.listStyle = 'none';
 
@@ -29,13 +29,14 @@ function createImageCardMarkup(galleryItems) {
     .join('');
 }
 
-function handelGalleryCollectionClick(evt) {
-  evt.preventDefault();
-  if (evt.target.nodeName !== 'IMG') return;
+let lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+});
 
-  let lightbox = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionPosition: 'bottom',
-    captionDelay: 250,
-  });
-}
+// function handelGalleryCollectionClick(evt) {
+//   evt.preventDefault();
+//   if (evt.target.nodeName !== 'IMG') return;
+
+// }
